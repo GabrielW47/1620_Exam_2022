@@ -52,3 +52,21 @@ const contactsList = [
 ]
 
 // Your code goes here
+object.addEventListener("load", my_start());
+
+function my_start(){
+  for (const person in contactsList){
+    const person_divs = document.createElement("div")
+    const readnoteContainer = document.getElementsByClassName("display_all_contacts")[0]
+    readnoteContainer.appendChild(person_divs)
+
+    const face = document.createElement("img")
+    face.innerText = note[0]
+    face.appendChild(person_divs)
+
+    const notebody = document.createElement("p")
+    notebody.innerText = person.name
+    notebody.appendChild(person_divs)
+  }
+
+}
