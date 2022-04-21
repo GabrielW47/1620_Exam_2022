@@ -66,7 +66,7 @@ window.onload = () => {
       let face = document.createElement("img")
       face.classList.add('face')
       face.appendChild(person_divs)
-      document.getElementsByClassName('face')[0].src="img/",person.image;
+      //document.getElementsByClassName('face')[0].src="img/",person.image;
 
       const name = document.createElement("p")
       name.innerText = person.name

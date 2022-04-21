@@ -65,9 +65,7 @@ header a:hover {
   text-decoration: underline;
 }
 
-main {
-
-}
+/*i got ride of main that was here it was emty and making problums*/
 
 #individual_contact {
   display: flex;
@@ -138,4 +136,25 @@ footer p {
   font-size: 1.6rem;
   color: var(--grey);
   align-self: center;
+}
+/*my new stuff*/
+
+div {
+  color: #e88e66;
+}
+
+header ul{
+  justify-content: space-between
+}
+
+header {
+  width: 100vh;
+}
+
+footer{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  text-align: center;
 }
