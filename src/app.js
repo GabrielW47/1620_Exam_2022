@@ -52,21 +52,25 @@ const contactsList = [
 ]
 
 // Your code goes here
-object.addEventListener("load", my_start());
+window.onload = () => {
 
-function my_start(){
-  for (const person in contactsList){
-    const person_divs = document.createElement("div")
-    const readnoteContainer = document.getElementsByClassName("display_all_contacts")[0]
-    readnoteContainer.appendChild(person_divs)
+  my_start()
 
-    const face = document.createElement("img")
-    face.innerText = note[0]
-    face.appendChild(person_divs)
+  function my_start(){
+    for (let person in contactsList){
+      const person_divs = document.createElement("div")
+      person_divs.classList.add('idCard')
+      const cardContainer = document.getElementById("display_single_contact")
+      cardContainer.appendChild(person_divs)
 
-    const notebody = document.createElement("p")
-    notebody.innerText = person.name
-    notebody.appendChild(person_divs)
+      let face = document.createElement("img")
+      face.classList.add('face')
+      face.appendChild(person_divs)
+      document.getElementsByClassName('face')[0].src="img/",person.image;
+
+      const name = document.createElement("p")
+      name.innerText = person.name
+      name.appendChild(person_divs)
+    }
   }
-
 }
